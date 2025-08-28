@@ -4,10 +4,10 @@ import AmountInput from "./components/AmountInput";
 import ConversionResult from "./components/ConversionResult";
 
 const API_KEY = import.meta.env.VITE_EXCHANGE_API_KEY;
-const API_BASE = `https://v6.exchangerate-api.com/v6/${API_KEY}`; // ExchangeRate-API v6 endpoint
+const API_BASE = `https://v6.exchangerate-api.com/v6/${API_KEY}`;
 
 export default function App() {
-  const [rates, setRates] = useState(null); // store rates object for chosen base
+  const [rates, setRates] = useState(null); 
   const [currencies, setCurrencies] = useState([]);
   const [fromCurrency, setFromCurrency] = useState("ZAR");
   const [toCurrency, setToCurrency] = useState("USD");
@@ -17,13 +17,11 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Fetch a default set of rates (base USD) and list of supported codes
   useEffect(() => {
     async function fetchRates() {
       setLoading(true);
       setError("");
       try {
-        // fetch latest with USD base to get list of supported currencies
         const res = await fetch(`${API_BASE}/latest/USD`);
         const data = await res.json();
         if (data.result === "success") {
@@ -42,7 +40,6 @@ export default function App() {
     fetchRates();
   }, []);
 
-  // Convert function: use fetched rates to compute conversion
   function convert() {
     setError("");
     setConverted("");
@@ -55,7 +52,6 @@ export default function App() {
       return;
     }
 
-    // Use conversion via USD base: value_in_USD = amount / rate_of_from; result = value_in_USD * rate_of_to
     const rateFrom = rates[fromCurrency];
     const rateTo = rates[toCurrency];
 
@@ -79,9 +75,6 @@ export default function App() {
     setConverted("");
     setExchangeInfo(null);
     setError("");
-    // optionally reset currencies to defaults:
-    // setFromCurrency("ZAR");
-    // setToCurrency("USD");
   }
 
   return (

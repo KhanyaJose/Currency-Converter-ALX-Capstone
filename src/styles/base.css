@@ -1,0 +1,47 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Arial", sans-serif; }
+
+/* App shell */
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; background: #0f0830; color: #fff; }
+.app-header { display:flex; align-items:center; justify-content:space-between; padding:18px 28px; }
+.app-header h1 { font-size:22px; letter-spacing:2px; }
+
+/* Container */
+.container { display:flex; justify-content:center; padding:28px; flex:1; }
+.converter-card { width:100%; max-width:920px; background:#fff; color:#000; border-radius:8px; padding:22px; box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+
+/* Selectors row */
+.selectors-row { display:flex; align-items:center; gap:18px; margin-bottom:18px; }
+.currency-selector { flex:1; }
+.currency-selector .small-label { font-size:12px; color:#333; margin-bottom:6px; display:block; }
+.currency-selector select { width:100%; padding:12px; border-radius:6px; border:1px solid #ccc; font-size:18px; }
+
+/* swap arrows */
+.swap-arrows { font-size:26px; color:#222; }
+
+/* amount input */
+.amount-input { margin-bottom:16px; }
+.amount-input input { width:100%; padding:12px; border-radius:6px; border:1px solid #ccc; font-size:16px; }
+
+/* actions */
+.actions-row { display:flex; gap:12px; align-items:center; margin-top:12px; }
+.convert-btn { background:#1b3b68; color:#fff; padding:14px 36px; border-radius:26px; border:none; font-weight:700; cursor:pointer; }
+.clear-btn { background:#fff; color:#000; padding:12px 28px; border-radius:26px; border:none; font-weight:700; cursor:pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+
+.error { color: #a00; margin-top:8px; }
+
+/* result */
+.result { margin-top:18px; padding:12px; border-radius:6px; background:#f4f4f4; }
+.converted-value { font-size:22px; font-weight:700; margin-top:6px; }
+
+.result-placeholder { margin-top:18px; color:#666; }
+
+/* footer */
+.app-footer { padding:12px 18px; text-align:center; color:#ddd; }
+
+/* Responsive */
+@media (max-width:720px) {
+  .selectors-row { flex-direction:column; }
+  .swap-arrows { display:none; }
+  .converter-card { padding:16px; }
+}

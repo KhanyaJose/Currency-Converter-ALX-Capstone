@@ -1,12 +1,34 @@
-# React + Vite
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple and responsive **Currency Converter** built with **React** and **Vite**, featuring live exchange rates from the **ExchangeRate API**
 
-Currently, two official plugins are available:
+--
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## Expanding the ESLint configuration
+Check it out: (https://currency-converter-alx-capstone.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+--
+
+## Features
+
+-Fetches **live currency exchange rates** from the ExchangeRate-API.
+-**Converts** amounts between different currencies instantly.
+-**Clear button** to remove any inputs.
+-**Up and down arrows** in the text field where you can press the **up** button to have higher amounts or **down** button to get lower amounts, even going lower than zero into the negatives.
+
+--
+
+## Technologies Used
+
+-**React** - Frontend library for building UI components
+-**Vite** - Development server and build tool
+-**CSS** - For styling and layout
+-**ExchangeRate-API** - Free currency exchange API
+-**Netlify** - For hosting and deployment
+
+--
+
+## Github Repository
+
+(https://github.com/KhanyaJose/Currency-Converter-ALX-Capstone.git)
